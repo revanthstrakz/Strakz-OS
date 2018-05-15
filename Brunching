@@ -1,0 +1,59 @@
+sudo apt-get install openjdk-8-jdk
+
+- sudo apt-get update && sudo apt-get install git-core gnupg flex bison gperf libsdl1.2-dev libesd0-dev libwxgtk2.8-dev squashfs-tools build-essential zip curl libncurses5-dev zlib1g-dev openjdk-8-jre openjdk-8-jdk pngcrush schedtool libxml2 libxml2-utils xsltproc lzop libc6-dev schedtool g++-multilib lib32z1-dev lib32ncurses5-dev lib32readline-gplv2-dev gcc-multilib maven tmux screen w3m ncftp
+
+~~~~~~~~~~~~~~~~~~~~~~
+
+2. Initializing Repo
+
+- mkdir ~/bin
+
+- PATH=~/bin:$PATH
+
+- curl http://commondatastorage.googleapis.c... (ADD ANGLE BRACKET HERE CLOSING) ~/bin/repo
+
+- chmod a+x ~/bin/repo
+
+~~~~~~~~~~~~~~~~~~~~~~
+
+3. Make Folders
+
+- mkdir ROMNAME
+
+- cd ROMNAME
+
+~~~~~~~~~~~~~~~~~~~~~~
+
+4. Initialize ROM REPO
+
+FOR LINEAGEOS
+
+- repo init -u git://github.com/LineageOS/android.git -b cm-14.1
+
+FOR RR
+
+-  repo init -u https://github.com/ResurrectionRemix/... -b nougat
+
+~~~~~~~~~~~~~~~~~~~~~~
+
+5. Repo Sync
+
+- repo sync
+
+~~~~~~~~~~~~~~~~~~~~~~
+
+6. Building ROM
+
+- source build/envsetup.sh
+
+- breakfast DEVICECODENAME
+
+- ./extract-files.sh 
+
+- export USE_CCACHE=1
+
+- prebuilts/misc/linux-x86/ccache/ccache -M 50G
+
+- croot
+
+- brunch DEVICECODENAME
